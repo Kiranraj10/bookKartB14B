@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
@@ -9,6 +9,9 @@ export class userService {
   url="https://bookcart.azurewebsites.net/api/user"
   constructor(private http:HttpClient) { }
    postre(post:any){
-     return this.http.post(this.url,JSON.stringify(post))
+    const httpHeader=new HttpHeaders({
+      'content-type':'application/json'
+    });
+     return this.http.post(this.url,JSON.stringify(post),{headers:httpHeader})
    }
 }

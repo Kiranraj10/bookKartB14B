@@ -17,11 +17,21 @@ img{
 }
 .register{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    width:900px;
+    width:700px;
+    margin:10px;
+}
+.boxmodel{
+    width:750px;
+    height:510px;
+    margin:100px 350px;
+    border:1px solid red
 }
 .i{
     margin-top: 10px;
     margin-left: 10px;
+}
+.button{
+    margin-right:300px;
 }
 .icon{
     float:right;

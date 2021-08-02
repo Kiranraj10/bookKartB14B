@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { userService } from '../user-service.service';
 
 
@@ -11,7 +12,7 @@ import { userService } from '../user-service.service';
 export class UserComponent implements OnInit {
 
   
-  constructor(private formbuilder:FormBuilder,private register:userService){}
+  constructor(private formbuilder:FormBuilder,private register:userService,private router:Router){}
 
   
   ngOnInit(){
@@ -48,11 +49,15 @@ export class UserComponent implements OnInit {
  }
  
  submit(){
+   if(this.reactiveform.valid){
+     
+   }
   console.log(this.newvar)
    
-  this.register.postre(this.newvar).subscribe((data: any)=>{
-
-    console.log(this.newvar)
+  this.register.postre(this.reactiveform.value).subscribe(
+    ()=>{
+    this.router.navigate(['/login']);
+    
   })
 
   
