@@ -50,18 +50,12 @@ export class UserComponent implements OnInit {
  
  submit(){
    if(this.reactiveform.valid){
-     
+    this.register.postre(this.reactiveform.value).subscribe(
+      ()=>{
+      this.router.navigate(['/login']);
+      
+    })
    }
-  console.log(this.newvar)
-   
-  this.register.postre(this.reactiveform.value).subscribe(
-    ()=>{
-    this.router.navigate(['/login']);
-    
-  })
-
-  
-  
  }
  
 
