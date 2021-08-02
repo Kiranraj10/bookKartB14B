@@ -1,0 +1,46 @@
+span{
+    color:blue
+}
+p {
+    font-family: Lato;
+    }
+
+img{
+    width:100px;
+}
+.example-card {
+    max-width: 100px;
+    margin: 4px
+    }
+.example-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.register{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width:900px;
+}
+.i{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.icon{
+    float:right;
+}
+.small{
+    margin-top:0px;
+    color:red;
+    font-size: 10px;
+}
+.example-full-width{
+    width:700px;
+    background-color: white;
+}
+    
+ mat-card-subtitle{
+    font-size:30px
+    }
+    
+ mat-card-title{
+    color:green;
+    font-size:40px
+    }
